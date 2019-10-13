@@ -1,0 +1,373 @@
+//Variables
+
+//Mixins
+
+//Global Style
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    height:100%;
+}
+//Custom Style
+.wrapper{
+    display: flex;
+    background-color: #F5F5F5;
+}
+.contain{
+    background-color: #fff;
+    flex-basis: 7%;
+    border: 1px solid #d2d2d2;
+}
+.sideslider{
+    display: flex;
+    flex-direction: column;
+    &__icon{
+        border-bottom: 0.2px solid rgb(167, 167, 167);
+        width: 110px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 65px;
+        padding-top: 6px;
+        img{
+            width: 40px;
+            height: 40px;
+        }
+    }
+}
+.content{
+    height:100%;
+    width: 100%;
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    &__columnOne{
+        flex: 50%;
+        .bottom{
+            
+            &__left{
+                flex: 50%;
+            }
+            &__right{
+                flex: 50%;
+            }
+        }
+        .top{
+            .googleplus{
+                background-color: white;
+                height: 300px;
+                margin: 10px;
+                display: flex;
+                justify-content: space-between;
+                position: relative;
+                border-radius: 6px;
+                &__left{
+                    .title{
+                        font-size: 25px;
+                        margin: 30px;
+                    }
+                    .content{
+                        font-size: 15px;
+                        margin: 30px;
+                    }
+                    .circles{
+                        display: flex;
+                        justify-content: flex-end;
+                        span{
+                            height: 12px;
+                            width: 12px;
+                            background: gray;
+                            border-radius: 50%;
+                            display: inline-block;
+                            cursor: pointer;
+                        }
+                        .active{
+                            background-color: red;
+                        }
+                    }
+                }
+                &__right{
+                    button{
+                        text-decoration: none;
+                        width: 200px;
+                        height: 50px;
+                        background-color: blue;
+                        color: white;
+                        margin: 20px;
+                    }
+                }
+            }
+        }
+        .bottom{
+            display: flex;
+            justify-content: space-between;
+            &__left{
+                flex: 50%;
+                .blogger{
+                    background-color: #C84941;
+                    margin: 10px;
+                    position: relative;
+                    border-radius: 6px;
+                    &__image{
+                        text-align: center;
+                    }
+                    &__details{
+                        opacity: 0;
+                        background-color: rgb(197, 60, 50);
+                        padding: 5px;
+                        color: white;
+                    }
+                    &:hover{
+                       .blogger__details{
+                        transition: 0.9s;
+                        opacity: 1;
+                       }
+                       .blogger__image{
+                        transform: scale(0.6, 0.6);
+                        transition: 0.9s;
+                       } 
+                    }
+                }
+                .android{
+                    background-color: rgb(5, 148, 5);
+                    margin: 10px;
+                    position: relative;
+                    border-radius: 6px;
+                    &__image{
+                        text-align: center;
+                    }
+                    &__details{
+                        opacity: 0;
+                        background-color: rgb(3, 139, 3);
+                        padding: 5px;
+                        color: white;
+                    }
+                    &:hover{
+                       .android__details{
+                        transition: 0.9s;
+                        opacity: 1;
+                       }
+                       .android__image{
+                        transform: scale(0.6, 0.6);
+                        transition: 0.9s;
+                       } 
+                    }
+                }
+            }
+            &__right{
+                flex: 50%;
+                .chrome{
+                    background-color: rgb(70, 11, 11);
+                    margin: 10px;
+                    position: relative;
+                    border-radius: 6px;
+                    &__image{
+                        text-align: center;
+                    }
+                    &__details{
+                        opacity: 0;
+                        background-color: rgb(70, 8, 8);
+                        padding: 5px;
+                        color: white;
+                    }
+                    &:hover{
+                       .chrome__details{
+                        transition: 0.9s;
+                        opacity: 1;
+                       }
+                       .chrome__image{
+                        transform: scale(0.6, 0.6);
+                        transition: 0.9s;
+                       } 
+                    }
+                }
+                .music{
+                    background-color: rgb(253, 230, 25);
+                    margin: 10px;
+                    position: relative;
+                    border-radius: 6px;
+                    &__image{
+                        text-align: center;
+                    }
+                    &__details{
+                        opacity: 0;
+                        background-color: rgb(248, 225, 16);
+                        padding: 5px;
+                        color: white;
+                    }
+                    &:hover{
+                       .music__details{
+                        transition: 0.9s;
+                        opacity: 1;
+                       }
+                       .music__image{
+                        transform: scale(0.6, 0.6);
+                        transition: 0.9s;
+                       } 
+                    }
+                }
+            }
+        }
+    }
+    &__columnTwo{
+        flex: 25%;
+        .gmail{
+            background-color: rgb(174, 203, 219);
+            margin: 10px;
+            position: relative;
+            border-radius: 6px;
+            &__image{
+                text-align: center;
+            }
+            &__details{
+                opacity: 0;
+                background-color: rgb(136, 177, 199);
+                padding: 5px;
+                color: white;
+            }
+            &:hover{
+               .gmail__details{
+                transition: 0.9s;
+                opacity: 1;
+               }
+               .gmail__image{
+                transform: scale(0.6, 0.6);
+                transition: 0.9s;
+               } 
+            }
+        }
+        .news{
+            background-color: rgb(136, 211, 175);
+            margin: 10px;
+            position: relative;
+            border-radius: 6px;
+            &__image{
+                text-align: center;
+            }
+            &__details{
+                opacity: 0;
+                background-color: rgb(115, 196, 156);
+                padding: 5px;
+                color: white;
+            }
+            &:hover{
+               .news__details{
+                transition: 0.9s;
+                opacity: 1;
+               }
+               .news__image{
+                transform: scale(0.6, 0.6);
+                transition: 0.9s;
+               } 
+            }
+        }
+        .googleEarth{
+            background-color: rgb(14, 14, 58);
+            margin: 10px;
+            position: relative;
+            border-radius: 6px;
+            flex: 1;
+            &__image{
+                text-align: center;
+            }
+            &__details{
+                opacity: 0;
+                background-color: rgb(2, 2, 32);
+                padding: 5px;
+                color: white;
+            }
+            &:hover{
+               .googleEarth__details{
+                transition: 0.9s;
+                opacity: 1;
+               }
+               .googleEarth__image{
+                transform: scale(0.6, 0.6);
+                transition: 0.9s;
+               } 
+            }
+        }
+    }
+    &__columnThree{
+        flex: 25%;
+        .maps{
+            background-color: rgb(247, 202, 3);
+            margin: 10px;
+            position: relative;
+            border-radius: 6px;
+            &__image{
+                text-align: center;
+            }
+            &__details{
+                opacity: 0;
+                background-color: rgb(233, 191, 4);
+                padding: 5px;
+                color: white;
+            }
+            &:hover{
+               .maps__details{
+                transition: 0.9s;
+                opacity: 1;
+               }
+               .maps__image{
+                transform: scale(0.6, 0.6);
+                transition: 0.9s;
+               } 
+            }
+        }
+        .search{
+            background-color: rgb(69, 69, 243);
+            margin: 10px;
+            position: relative;
+            border-radius: 6px;
+            &__image{
+                text-align: center;
+            }
+            &__details{
+                opacity: 0;
+                background-color: rgb(36, 36, 241);
+                padding: 5px;
+                color: white;
+            }
+            &:hover{
+               .search__details{
+                transition: 0.9s;
+                opacity: 1;
+               }
+               .search__image{
+                transform: scale(0.6, 0.6);
+                transition: 0.9s;
+               } 
+            }
+        }
+        .youtube{
+            background-color: rgb(29, 28, 28);
+            margin: 10px;
+            position: relative;
+            border-radius: 6px;
+            flex: 1;
+            &__image{
+                text-align: center;
+            }
+            &__details{
+                opacity: 0;
+                background-color:black;
+                padding: 5px;
+                color: white;
+            }
+            &:hover{
+               .youtube__details{
+                transition: 0.9s;
+                opacity: 1;
+               }
+               .youtube__image{
+                transform: scale(0.6, 0.6);
+                transition: 0.9s;
+               } 
+            }
+        }
+    }
+}
